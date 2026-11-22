@@ -49,7 +49,14 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      QPC.sineWave();
+      QPC.sineWave({
+        count: 2000,      // numero di linee
+        length: 320,      // lunghezza di ogni linea, in px
+        gap: 4,           // distanza fra una linea e l'altra, in px
+        twist: 0.01,      // rotazione in più di ogni linea, in radianti
+        speed: 1,         // moltiplicatore della velocità
+        color: 'rainbow'  // colore esadecimale ('#ff0000'), oppure 'rainbow'
+      });
     });
   </script>
 

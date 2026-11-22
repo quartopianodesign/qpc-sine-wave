@@ -15,8 +15,14 @@ L'originale usava three.js e jQuery; qui è riscritto in WebGL2 diretto, senza l
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    QPC.sineWave();                       // come sul sito: 2000 linee rosse
-    // QPC.sineWave({ color: 'rainbow' }); // lo shader del 2021
+    QPC.sineWave({
+      count: 2000,      // numero di linee
+      length: 320,      // lunghezza di ogni linea, in px
+      gap: 4,           // distanza fra una linea e l'altra, in px
+      twist: 0.01,      // rotazione in più di ogni linea, in radianti
+      speed: 1,         // moltiplicatore della velocità
+      color: 'rainbow'  // colore esadecimale ('#ff0000'), oppure 'rainbow'
+    });
   });
 </script>
 ```
