@@ -1,0 +1,26 @@
+{
+  "name": "qpc-sine-wave",
+  "version": "1.0.0",
+  "description": "QPC Sine Wave — le 2000 linee in rotazione della hero di Quarto Piano (2021), riscritte in WebGL2 senza librerie.",
+  "private": true,
+  "license": "MIT",
+  "author": "Quarto Piano Comunicazione",
+  "repository": "github:quartopianodesign/qpc-sine-wave",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --mode development --watch",
+    "build": "NODE_ENV=production webpack --mode production && sass --no-source-map src/scss/style.scss codepen/style.css"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "browser-sync-webpack-plugin": "^2.4.0",
+    "css-loader": "^7.1.5",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "html-webpack-plugin": "^5.6.8",
+    "mini-css-extract-plugin": "^2.10.2",
+    "sass": "^1.108.2",
+    "sass-loader": "^17.1.1",
+    "terser-webpack-plugin": "^5.6.1",
+    "webpack": "^5.113.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QPC Sine Wave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wdth,wght@85..100,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="qpc-line-container"></div>
+
+  <header class="qpc-hero__header">
+    <a class="qpc-hero__logo" href="#" aria-label="Quarto Piano Comunicazione"><svg class="logo-qpc" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.4 40.4"><g transform="translate(-164.634 112.995)"><g transform="translate(-311.148 -408.857)"><path d="M510.7,336.3h-1.5v-40.4h27.6v29h-1.5v-27.5h-24.6V336.3z"/><path d="M503.4,336.3h-1.5v-38.9h-24.6v27.5h-1.5v-29h27.6V336.3z"/></g><g transform="translate(-311.148 -408.857)"><path d="M570.2,325.7h-26.8v-29.8h26.8v1.5h-25.3v26.8h25.3V325.7z"/></g></g></svg></a>
+    <nav class="qpc-hero__menu">
+      <a href="#">Agenzia</a>
+      <a href="#">Progetti</a>
+      <a href="#">Contatti</a>
+      <div class="qpc-info">
+        <button class="qpc-info__toggle" type="button" aria-label="Informazioni" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10.75" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10.75 6h2.5v2.5h-2.5zM10.75 10h2.5v8h-2.5z" fill="currentColor"/>
+          </svg>
+        </button>
+        <dialog class="qpc-info__modal" aria-label="Informazioni">
+          <svg class="qpc-info__git" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+          <a class="qpc-info__link" href="https://github.com/quartopianodesign/qpc-sine-wave" target="_blank" rel="noopener">Scarica la risorsa su GitHub</a>
+          <form method="dialog"><button class="qpc-info__close" aria-label="Chiudi">×</button></form>
+        </dialog>
+      </div>
+    </nav>
+  </header>
+
+  <main class="qpc-hero">
+    <h1 class="qpc-hero__title">
+      <span>Aiutiamo le aziende</span>
+      <span>ad affrontare la trasformazione digitale</span>
+      <span>e a migliorare le loro performance.</span>
+    </h1>
+  </main>
+
+  <footer class="qpc-hero__footer">
+    <p>Comunicazione, web e design</p>
+    <p>Scorri per scoprire ↓</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      QPC.sineWave();
+    });
+  </script>
+
+</body>
+</html>

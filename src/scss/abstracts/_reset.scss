@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: $blunero;
+  color: $bianco;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-variation-settings: "wght" 300, "wdth" 100;
+  -webkit-font-smoothing: antialiased;
+}

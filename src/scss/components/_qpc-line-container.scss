@@ -1,0 +1,13 @@
+// le linee: fisse dietro la pagina, a tutta finestra, come sul sito
+.qpc-line-container {
+  position: fixed;
+  inset: 0;
+  opacity: .6;
+  pointer-events: none;
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

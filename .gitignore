@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+prompt-mos-lab.md
+codepen/
+dist/
+linkedin.txt
+codepen.txt
+package-lock.json

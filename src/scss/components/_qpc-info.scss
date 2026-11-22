@@ -1,0 +1,88 @@
+// info: icona in alto a destra + modale con il link al repo
+// fissa sulla pagina, segue --ground e --soft del tema
+.qpc-info {
+  &__toggle {
+    position: fixed;
+    top: 1rem;
+    border-radius: 100%;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    border: 0;
+    background: none;
+    color: var(--soft);
+    opacity: .6;
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover,
+    &:focus-visible { opacity: 1; }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__modal {
+    padding: 2rem 3.5rem 2rem 2rem;
+    border: 0;
+    background: var(--soft);
+    color: var(--ground);
+    font: 500 1.125rem/1.4 system-ui, sans-serif;
+
+    // fade in/out: display e overlay "discreti" tengono il dialog visibile
+    // finché l'opacità non è arrivata a 0; @starting-style dà il punto di partenza
+    opacity: 0;
+    transition: opacity .3s, display .3s allow-discrete, overlay .3s allow-discrete;
+
+    &::backdrop {
+      background: rgb(0 0 0 / 0);
+      transition: background .3s, display .3s allow-discrete, overlay .3s allow-discrete;
+    }
+
+    &[open] {
+      opacity: 1;
+
+      @starting-style { opacity: 0; }
+    }
+
+    &[open]::backdrop {
+      background: rgb(0 0 0 / .55);
+
+      @starting-style { background: rgb(0 0 0 / 0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &,
+      &::backdrop { transition: none; }
+    }
+  }
+
+  &__git {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .5em;
+    vertical-align: -.4em;
+  }
+
+  &__link {
+    color: inherit;
+    text-underline-offset: .2em;
+  }
+
+  &__close {
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
